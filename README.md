@@ -2,7 +2,7 @@
 
 **Available for Chrome, Safari and Firefox.**
 
-![Screenshot of HNProfile](http://i.imgur.com/VROns8e.png)
+![Screenshot of HNProfile](https://github.com/mudulo/hnprofile/raw/master/screenshot.png)
 
 HNProfile lets you quickly glance at a user's profile without leaving the page
 you're on. You can quickly see a user's bio, karma, account age - plus quick
