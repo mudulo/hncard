@@ -11,12 +11,14 @@ function extractGithubs(text) {
 }
 
 function getDataForUser(username, callback) {
-  $.get("/user?id=" + username, function(data) {
+  //console.log(username);
+  $.get("https://news.ycombinator.com/user?id=" + username, function(data) {
     var created = 0;
     var karma = 0;
     var bio = "";
     var avatar_url = null;
 
+    //console.log("Data is "+data);
     try {
       // Loop through trs:
       $(data).find('tr').each(function() {
@@ -73,9 +75,12 @@ function getDataForUser(username, callback) {
         account_age: created,
       });
     } catch(err) {
-      console.log(err);
+      //console.log(err);
       return callback(null);
     }
+  }).fail(function(e){ 
+  // Handle error here
+   //console.log(e);
   });
 }
 
@@ -84,22 +89,23 @@ function renderRateLimited() {
 }
 
 function getExtensionImage(src) {
-  if (HNProfileBrowser == "safari") {
-    return safari.extension.baseURI + src;
-  } else if (HNProfileBrowser == "chrome") {
+  //if (HNProfileBrowser == "safari") {
+  //  return safari.extension.baseURI + src;
+  //} else if (HNProfileBrowser == "chrome") {
     return chrome.extension.getURL(src);
-  } else {
-    console.log("HNProfile: error accessing browser name");
-    return src;
-  }
+  //} else {
+   // console.log("HNProfile: error accessing browser name");
+   //console.log("SRC is "+chrome.extension.getURL(src))
+    //return src;
+  //}
 }
 
 function renderLoadingTemplate() {
-  if (HNProfileBrowser == 'firefox') {
-    var imgURL = self.options.loadingUrl;
-  } else {
-    var imgURL = getExtensionImage("img/loading.gif");
-  }
+  //if (HNProfileBrowser == 'firefox') {
+  //  var imgURL = self.options.loadingUrl;
+  //} else {
+    var imgURL = getExtensionImage("img/load.gif");
+  //}
   var html = "<div class='hnprofile-loading' style='background-image: url(" + imgURL + ");'></div>";
   return html;
 }
@@ -109,11 +115,12 @@ function renderProfileTemplate(data) {
   var bio = data["bio"].replace(/\n/g, "<br>");
 
   // Get avatar URL:
-  if (HNProfileBrowser == 'firefox') {
-    var avatarUrl = self.options.profileUrl;
-  } else {
+  //if (HNProfileBrowser == 'firefox') {
+  //  var avatarUrl = self.options.profileUrl;
+  //} else {
     var avatarUrl = getExtensionImage("img/profile.png");
-  }
+    //console.log(avatarUrl);
+  //}
   if (data["avatar"]) {
     var avatarUrl = data["avatar"];
   }
@@ -170,10 +177,13 @@ $(function() {
     // Save link for use in callback:
     var link = $(this);
     var username = $(this).attr('href').substr(8)
+    //console.log(username)
 
     // When popover is opened, fetch the user's info:
     drop.on('open', function() {
+      //console.log("Open")
       getDataForUser(username, function(data) {
+        //console.log(username)
         if (!data) {
           $(drop.content).html(renderRateLimited());
         } else {

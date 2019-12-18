@@ -1,0 +1,35 @@
+{
+    "name": "HN Card",
+    "version": "1.0",
+    "description": "HN Card adds profile overlays to Hacker News usernames",
+    "manifest_version": 2,
+
+    "icons": {
+  	},
+  	"permissions": [
+    	"http://news.ycombinator.com/*",
+    	"https://news.ycombinator.com/*"
+  	],
+  	
+  	"content_scripts": [
+	    {
+	      "matches": [
+	        "http://news.ycombinator.com/*",
+	        "https://news.ycombinator.com/*"
+	      ],
+	      "css": [ "css/drop.css", "css/hnprofile.css" ],
+	      "js": [ "js/jquery.js",
+	      "js/drop.js",
+	      "js/md5.js",
+	      "js/hnprofile.js" ]
+	    }
+  	],
+  	"web_accessible_resources": [
+    	"img/*"
+  	],
+	"icons": {
+	   "16": "img/icon/icon16.png",
+	   "48": "img/icon/icon48.png",
+	   "128": "img/icon/icon128.png"
+	}
+}

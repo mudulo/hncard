@@ -92,7 +92,9 @@
   margin: 0px 10px;
   text-align: center;
   padding: 5px 0;
-  background: #eaeaea;
+  background: #ff6600;
+  color: #fff !important;
+  border-color: #ff6600;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
