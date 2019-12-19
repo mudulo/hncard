@@ -1,6 +1,6 @@
 {
     "name": "HN Card",
-    "version": "1.0",
+    "version": "1.1",
     "description": "HN Card adds profile overlays to Hacker News usernames",
     "manifest_version": 2,
 
