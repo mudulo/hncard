@@ -15,7 +15,7 @@ grab a copy from the appropriate extensions / addon store.
 
 <!--- ### Safari: --->
 
-<!-- Download here: https://github.com/timdavies/hnprofile/releases/download/1.0/hnprofile.safariextz --->
+<!--- Download here: https://github.com/timdavies/hnprofile/releases/download/1.0/hnprofile.safariextz --->
 
 ### Chrome:
 
