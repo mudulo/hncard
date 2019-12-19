@@ -10,7 +10,7 @@ links to their comments and submissions. Plus, if they have an email address
 or Github account in their bio (providing they've set up a Gravatar or Github
 avatar), you'll see their avatar too.
 
-HN Card is available for Chrome and Firefox. Most users will want to
+HN Card is available for Chrome and Firefox. You would want to
 grab a copy from the appropriate extensions / addon store.
 
 <!--- ### Safari: --->
@@ -19,15 +19,13 @@ grab a copy from the appropriate extensions / addon store.
 
 ### Chrome:
 
-Download here: https://chrome.google.com/webstore/detail/hnprofile/gheapnefkgncnelpbgjdbckmglilbgdl
+Download here: https://chrome.google.com/webstore/detail/hn-card/medlpimkoihjpkajkdlkjmphcdgldgkm
 
 ### Firefox
 
-Download here: https://github.com/timdavies/hnprofile/releases/download/1.0/hnprofile.xpi
+Download here: https://addons.mozilla.org/en-US/firefox/addon/hn-card/
 
-(A Firefox Marketplace link is coming soon - once accepted into the store).
-
-## Setting up to build from source
+<!---## Setting up to build from source
 
 1. Make sure you have Node.js and NPM installed.
 
@@ -45,9 +43,9 @@ Download here: https://github.com/timdavies/hnprofile/releases/download/1.0/hnpr
 
 1. If you plan to build for Firefox (and if you're planning to submit a pull
   request, please take the time to test in all browsers if you can), you will
-  need to [install the Mozilla Addon SDK](https://developer.mozilla.org/en-US/Add-ons/SDK/Tutorials/Installation).
+  need to [install the Mozilla Addon SDK](https://developer.mozilla.org/en-US/Add-ons/SDK/Tutorials/Installation).--->
 
-## Building from source
+## Testing & Debugging
 Make sure you've run `gulp` or are running `gulp watch` and then follow the
 instructions for the browser you want to build for.
 
@@ -64,28 +62,25 @@ Every time you make changes to the extension, once gulp has built them, you'll
 need to hit the "Reload" button.
 
 ### Chrome
-Once gulp has built the project, open Chrome and go into the settings and to
-the Extensions section. Make sure that "Developer mode" is ticked and click the
-"Load unpacked extension" button. Navigate to the project directory and then
-`build/chrome` and hit open/select in the file browser. The extension should
-now be installed.
+Clone or download this repository, open chrome://extensions, click "Load Unpacked", 
+then select the chrome folder from where you downloaded the repo.
 
 Each time you make changes to the extension, once they've been built by gulp,
 you'll need to click "Reload" by the extension in the settings (or, press
 Cmd+R).
 
 ### Firefox
-Once you have the project set up and building with gulp, and you have the
-Firefox addon SDK installed, you'll need to navigate to the project directory
-in your terminal and go into `build/firefox`. Then run `cfx run` and a Firefox
-window should pop up. The addon will be installed and ready to go.
+Clone or download this repository, open about:debugging, click "This is Firefox", 
+then select the firefox folder from where you downloaded the repo, then select manifest.json
 
-Each time you make changes, you'll need to run `cfx run` again. Remember - gulp
-creates a new directory each time so you'll have to run `cd `pwd`` before
-running `cfx run` each time.
+Each time you make changes to the extension, once they've been built by gulp,
+you'll need to click "Reload" by the extension in the settings (or, press
+Cmd+R).
 
 ## Contributing
 
+Think you could help build & test a Safari extension, please feel free to fork this
+repository, Currently quickly rebuilt this for Chrome and Firefox
 As HNProfile supports Chrome, Safari and Firefox, please test your code in all
 browsers if you can. If you can't (e.g. you're on Linux and can't test in
 Safari), please let me know and I'll test for you.
