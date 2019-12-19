@@ -65,17 +65,9 @@ need to hit the "Reload" button. -->
 Clone or download this repository, open chrome://extensions, click "Load Unpacked", 
 then select the chrome folder from where you downloaded the repo.
 
-Each time you make changes to the extension, once they've been built by gulp,
-you'll need to click "Reload" by the extension in the settings (or, press
-Cmd+R).
-
 ### Firefox
 Clone or download this repository, open about:debugging, click "This is Firefox", 
 then select the firefox folder from where you downloaded the repo, then select manifest.json
-
-Each time you make changes to the extension, once they've been built by gulp,
-you'll need to click "Reload" by the extension in the settings (or, press
-Cmd+R).
 
 ## Contributing
 
