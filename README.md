@@ -23,7 +23,7 @@ Download here: https://chrome.google.com/webstore/detail/hn-card/medlpimkoihjpka
 
 ### Firefox
 
-Download here: https://addons.mozilla.org/en-US/firefox/addon/hn-card/
+Download here: https://addons.mozilla.org/en-US/firefox/addon/hn-card
 
 <!---## Setting up to build from source
 
