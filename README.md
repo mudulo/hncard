@@ -46,7 +46,7 @@ Download here: https://addons.mozilla.org/en-US/firefox/addon/hn-card/
   need to [install the Mozilla Addon SDK](https://developer.mozilla.org/en-US/Add-ons/SDK/Tutorials/Installation).--->
 
 ## Testing & Debugging
-Make sure you've run `gulp` or are running `gulp watch` and then follow the
+<!--Make sure you've run `gulp` or are running `gulp watch` and then follow the
 instructions for the browser you want to build for.
 
 ### Safari:
@@ -59,7 +59,7 @@ to the project directory, then go into `build/safari` and select the folder
 "Install" button at the top right.
 
 Every time you make changes to the extension, once gulp has built them, you'll
-need to hit the "Reload" button.
+need to hit the "Reload" button. -->
 
 ### Chrome
 Clone or download this repository, open chrome://extensions, click "Load Unpacked", 
