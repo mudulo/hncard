@@ -69,7 +69,4 @@ Clone or download this repository, open about:debugging (type in address bar), c
 
 ## Contributing
 Think you could help debug, test and package, a Safari extension, please feel free to fork this
-repository, Currently quickly rebuilt this for Chrome and Firefox
-As HNProfile supports Chrome, Safari and Firefox, please test your code in all
-browsers if you can. If you can't (e.g. you're on Linux and can't test in
-Safari), please let me know and I'll test for you.
+repository, Currently rebuilt this for Chrome and Firefox using Ubuntu, unable to test for Safari.
