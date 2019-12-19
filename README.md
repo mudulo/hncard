@@ -62,15 +62,12 @@ Every time you make changes to the extension, once gulp has built them, you'll
 need to hit the "Reload" button. -->
 
 ### Chrome
-Clone or download this repository, open chrome://extensions, click "Load Unpacked", 
-then select the chrome folder from where you downloaded the repo.
+Clone or download this repository, open chrome://extensions (type in address bar), click "Load Unpacked", then select the chrome folder.
 
 ### Firefox
-Clone or download this repository, open about:debugging, click "This is Firefox", 
-then select the firefox folder from where you downloaded the repo, then select manifest.json
+Clone or download this repository, open about:debugging (type in address bar), click "This is Firefox", then "Load Temporary addon" then browse to the firefox folder and select manifest.json.
 
 ## Contributing
-
 Think you could help debug, test and package, a Safari extension, please feel free to fork this
 repository, Currently quickly rebuilt this for Chrome and Firefox
 As HNProfile supports Chrome, Safari and Firefox, please test your code in all
