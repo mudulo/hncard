@@ -71,7 +71,7 @@ then select the firefox folder from where you downloaded the repo, then select m
 
 ## Contributing
 
-Think you could help build & test a Safari extension, please feel free to fork this
+Think you could help debug, test and package, a Safari extension, please feel free to fork this
 repository, Currently quickly rebuilt this for Chrome and Firefox
 As HNProfile supports Chrome, Safari and Firefox, please test your code in all
 browsers if you can. If you can't (e.g. you're on Linux and can't test in
