@@ -65,7 +65,7 @@ need to hit the "Reload" button. -->
 Clone or download this repository, open chrome://extensions (type in address bar), click "Load Unpacked", then select the chrome folder.
 
 ### Firefox
-Clone or download this repository, open about:debugging (type in address bar), click "This is Firefox", then "Load Temporary addon" then browse to the firefox folder and select manifest.json.
+Clone or download this repository, open about:debugging (type in address bar), click "This Firefox", then "Load Temporary addon" then browse to the firefox folder and select manifest.json.
 
 ## Contributing
 Think you could help debug, test and package, a Safari extension, please feel free to fork this
