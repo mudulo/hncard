@@ -110,6 +110,19 @@ function renderLoadingTemplate() {
   return html;
 }
 
+function sanitize(string) {
+  const map = {
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#x27;',
+      "/": '&#x2F;',
+  };
+  const reg = /[&<>"'/]/ig;
+  return string.replace(reg, (match)=>(map[match]));
+}
+
 function renderProfileTemplate(data) {
   // Format bio:
   var bio = data["bio"].replace(/\n/g, "<br>");
@@ -187,7 +200,7 @@ $(function() {
         if (!data) {
           $(drop.content).html(renderRateLimited());
         } else {
-          $(drop.content).html(renderProfileTemplate(data));
+          $(drop.content).html(renderProfileTemplate(sanitize(data)));
         }
       });
     });
