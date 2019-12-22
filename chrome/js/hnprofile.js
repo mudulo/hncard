@@ -73,7 +73,7 @@ function getDataForUser(username, callback) {
         account_age: created,
       });
     } catch(err) {
-      //console.log(err);
+      console.log(err);
       return callback(null);
     }
   });
@@ -104,17 +104,8 @@ function renderLoadingTemplate() {
   return html;
 }
 
-function sanitize(string) {
-  const map = {
-      '&': '&amp;',
-      '<': '&lt;',
-      '>': '&gt;',
-      '"': '&quot;',
-      "'": '&#x27;',
-      "/": '&#x2F;',
-  };
-  const reg = /[&<>"'/]/ig;
-  return string.replace(reg, (match)=>(map[match]));
+function cleanJS(str){
+  return str.replace('<script>', '').replace('</script>', '');
 }
 
 function renderProfileTemplate(data) {
@@ -158,8 +149,8 @@ function renderProfileTemplate(data) {
   html += "    <a href='/threads?id=" + data["username"] + "' class='hnprofile-link'>Comments</a>";
   html += "  </div>";
   html += "</div>";
-
-  return html;
+  
+  return cleanJS(html);
 }
 
 $(function() {
@@ -190,7 +181,7 @@ $(function() {
         if (!data) {
           $(drop.content).html(renderRateLimited());
         } else {
-          $(drop.content).html(renderProfileTemplate( sanitize(data) ));
+          $(drop.content).html(renderProfileTemplate( data ));
         }
       });
     });

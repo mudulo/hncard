@@ -110,17 +110,8 @@ function renderLoadingTemplate() {
   return html;
 }
 
-function sanitize(string) {
-  const map = {
-      '&': '&amp;',
-      '<': '&lt;',
-      '>': '&gt;',
-      '"': '&quot;',
-      "'": '&#x27;',
-      "/": '&#x2F;',
-  };
-  const reg = /[&<>"'/]/ig;
-  return string.replace(reg, (match)=>(map[match]));
+function cleanJS(str){
+  return str.replace('<script>', '').replace('</script>', '');
 }
 
 function renderProfileTemplate(data) {
@@ -166,7 +157,7 @@ function renderProfileTemplate(data) {
   html += "  </div>";
   html += "</div>";
 
-  return html;
+  return cleanJS(html);
 }
 
 $(function() {
@@ -200,7 +191,7 @@ $(function() {
         if (!data) {
           $(drop.content).html(renderRateLimited());
         } else {
-          $(drop.content).html(renderProfileTemplate(sanitize(data)));
+          $(drop.content).html(renderProfileTemplate(data));
         }
       });
     });
