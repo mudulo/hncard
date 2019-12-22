@@ -16,6 +16,13 @@ grab a copy from the appropriate extensions / addon store.
 <!--- ### Safari: --->
 
 <!--- Download here: https://github.com/timdavies/hnprofile/releases/download/1.0/hnprofile.safariextz --->
+## Why
+
+I thought this feature would be cool on HN, so wanted to implement it but a quick google search led me to the above forked repository, but couldn't install on firefox
+
+So this repo is simply an attempt to update the extension, and fix a few errors. All credit to (https://github.com/timdavies/hnprofile "Tim Davies")
+
+##Installation
 
 ### Chrome:
 
