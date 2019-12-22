@@ -22,7 +22,7 @@ I thought this feature would be cool on HN, so wanted to implement it but a quic
 
 So this repo is simply an attempt to update the extension, and fix a few errors. All credit to [Tim Davies](https://github.com/timdavies/hnprofile "HNProfile by Tim Davies")
 
-##Installation
+## Installation
 
 ### Chrome:
 
