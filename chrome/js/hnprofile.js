@@ -105,7 +105,7 @@ function renderLoadingTemplate() {
 }
 
 function cleanJS(str){
-  return str.replace('<script>', '').replace('</script>', '');
+  return str.replace('<script', '').replace('</script>', '');
 }
 
 function renderProfileTemplate(data) {
@@ -149,7 +149,7 @@ function renderProfileTemplate(data) {
   html += "    <a href='/threads?id=" + data["username"] + "' class='hnprofile-link'>Comments</a>";
   html += "  </div>";
   html += "</div>";
-  
+
   return cleanJS(html);
 }
 
