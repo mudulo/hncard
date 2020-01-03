@@ -1,3 +1,6 @@
+PLEASE ENABLE ISSUES ON THIS GITHUB REPO
+
+
 # HN Card - Profile Overlay for HN
 
 **Available for Chrome and Firefox.**
