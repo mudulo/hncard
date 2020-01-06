@@ -105,7 +105,7 @@ function renderLoadingTemplate() {
 }
 
 function cleanJS(str){
-  return str.replace('<script', '').replace('</script>', '');
+  return str.replace(/<script.*?>[\s\S]*?<\/script>/ig, "");
 }
 
 function renderProfileTemplate(data) {
